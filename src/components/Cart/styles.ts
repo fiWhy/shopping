@@ -1,6 +1,14 @@
 import { styled } from '../../styles';
 import { Grid } from '../../styles/grid';
 
+export const CartWrapperStyled = styled(Grid)`
+  margin: 20px 15px;
+`;
+
+export const ProductInfoWrapperStyled = styled(Grid)`
+  padding: 0 15px;
+`;
+
 export const ProductActionsWrapperStyled = styled(Grid)``;
 
 export const ProductImageStyled = styled.img`
@@ -8,19 +16,10 @@ export const ProductImageStyled = styled.img`
 `;
 
 export const ProductImageWrapperStyled = styled(Grid)`
-  height: 154px;
-  cursor: pointer;
+  width: 50px;
 `;
 
 export const ProductWrapperStyled = styled(Grid)`
-  min-width: 200px;
-  width: 200px;
-  height: 273px;
-`;
-
-export const GalleryWrapperStyled = styled(Grid)`
-  flex-wrap: wrap;
-  & > div {
-    margin: 12px 44px;
-  }
+  height: 50px;
+  margin-bottom: 20px;
 `;

@@ -1,7 +1,8 @@
+import { theme } from './theme';
+
 export interface Theme {
-  color: {
-    main: string;
-  };
+  color: typeof theme['dark']['color'];
+  text: typeof theme['dark']['text'];
 }
 
 export interface ThemeWrapper {

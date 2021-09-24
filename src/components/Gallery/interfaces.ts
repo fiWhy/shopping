@@ -1,19 +1,12 @@
-import { HTMLAttributes } from 'react';
-
-export interface GalleryImage {
-  id: string;
-  src: string;
-  alt?: string;
-}
+import { Product } from '../../interfaces/product';
 
 export interface GalleryProps {
-  data: GalleryImage[];
-  onImagePick?: (id: string) => void;
+  className?: string;
+  onSelectProduct?: (id: string) => void;
 }
 
-export interface GalleryImageProps
-  extends HTMLAttributes<HTMLImageElement>,
-    Omit<GalleryImage, 'id'> {
-  specialId: string;
-  onPick?: (id: string) => void;
+export interface ProductProps {
+  data: Product;
+  onSelect: () => void;
+  onAdd: () => void;
 }

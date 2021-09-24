@@ -1,20 +1,15 @@
-import { VFC } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Dashboard } from './pages';
+import React, { VFC } from 'react';
+import { Route, Switch } from 'react-router';
+import {
+    dashboardPath, productPath
+} from './constants/routes';
+import { Dashboard, Product } from './pages';
 
-export interface RoutesParams {
-  dashboard: null;
-  imageDetails: {
-    id: string;
-  };
-}
-
-export const Routes: VFC = () => {
+export const Router: VFC = () => {
   return (
     <Switch>
-      <Route path={'/'}>
-        <Dashboard />
-      </Route>
+      <Route exact={true} path={dashboardPath} component={Dashboard} />
+      <Route path={productPath} component={Product} />
     </Switch>
   );
 };

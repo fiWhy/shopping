@@ -5,6 +5,8 @@ export const Grid = styled.div<{
   direction?: 'column' | 'row';
   align?: 'center' | 'flex-start' | 'flex-end';
   justify?: 'center' | 'flex-start' | 'flex-end';
+  alignSelf?: 'center' | 'flex-start' | 'flex-end';
+  justifySelf?: 'center' | 'flex-start' | 'flex-end';
   flex?: number;
 }>`
   display: flex;
@@ -21,10 +23,22 @@ export const Grid = styled.div<{
           align-items: ${align};
         `
       : ``}
-        ${({ justify }) =>
+  ${({ justify }) =>
     justify
       ? css`
           justify-content: ${justify};
+        `
+      : ``}
+  ${({ alignSelf }) =>
+    alignSelf
+      ? css`
+          align-selft: ${alignSelf};
+        `
+      : ``}
+  ${({ justifySelf }) =>
+    justifySelf
+      ? css`
+          justify-self: ${justifySelf};
         `
       : ``}
 `;
